@@ -1,0 +1,30 @@
+<div class="example-container ">  
+    
+    <mat-card class="example-card">
+      <mat-card-header>
+        
+        
+      </mat-card-header>
+      <img mat-card-image src="data:image/jpg;base64,{{bien.images[0].image}}" class=" im" alt="Photo of a Shiba Inu">
+      <mat-card-content>
+       <p>
+          {{bien.description}}
+          {{ bien.prix_loc }}         
+          {{bien.typebien.libelletype}}
+          {{bien.localite.libelleloca}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+          <!-- <div class="button-row"> -->
+              <!-- <a routerLink="/Detail/{{biens.id}}" class="waves-effect waves-light btn">Details</a> -->
+            <a routerLink = "/reserve-cmp/{{bien.id}}" class="waves-effect waves-light btn">Details</a>
+              <!-- <button mat-raised-button color="primary" routerLink = "reserve-cmp" >Details</button> -->
+             
+            <!-- </div> -->
+      </mat-card-actions>
+    </mat-card>
+
+</div>
+
+
+

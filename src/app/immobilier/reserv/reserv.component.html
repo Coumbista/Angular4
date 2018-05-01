@@ -1,0 +1,14 @@
+        <app-header></app-header>      
+       
+        <app-form-bien (localite)="localite($event)" class="rech"></app-form-bien>
+
+
+    <div class="container">      
+        <div class="row" style="display:flex;flex-wrap: wrap;">
+            <div class="col s6" *ngFor="let Bien of bien |recherche:argument:cle | paginate: { itemsPerPage: 2, currentPage: p }">
+                <app-catalogue [bien]="Bien"></app-catalogue>
+            </div>
+            <pagination-controls (pageChange)="p = $event" previousLabel="Précédant" nextLabel="Suivant"></pagination-controls>
+        </div>
+    </div>
+        <app-footer></app-footer>

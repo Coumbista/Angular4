@@ -1,0 +1,47 @@
+<mat-toolbar style="background-color:rgb(32, 32, 32);color:white;">
+  <mat-toolbar-row>
+    <span>Immobilier De Luxe</span>
+
+    <span class="example-spacer"></span>
+    
+    <button routerLink = "/re-cmp" mat-button>Catalogue</button>
+    <!-- <button mat-button >Services</button> -->
+    <a type="button"routerLink = "/reservation-cmp" class="btn btn-primary">services</a>
+    <button mat-button>Contact</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<div class="container">
+  <h3 style="color:'ligthgrey'">Liste des Réservations</h3>
+<table>
+  <thead>
+    <tr>
+        <!-- <th>Date_Reservation</th>         -->
+        <th>Nom_Client</th>
+        <th>Nom_Bien</th>
+        <th> Images</th>
+        <th>Details</th>
+    </tr>
+  </thead>
+
+  <tbody >
+    <tr *ngFor=" let reservation of reserve">
+      <!-- <td>{{reservation.datereservation}}</td> -->
+      <td>{{reservation.client.nomclient}}</td>
+      <td>{{reservation.bien.nombien}}</td>
+      <td> <img mat-card-image src="data:image/jpg;base64,{{reservation.bien.images[0].image}}" class=" im" alt="Photo of a Shiba Inu"> </td>
+      <td><a  routerLink="/detail-cmp/{{reservation.id}}" class="waves-effect waves-light btn">Details</a> </td>
+     
+    </tr>
+   
+  </tbody>
+</table>
+</div>
+<mat-toolbar style="background-color:rgb(32, 32, 32)">
+    <mat-toolbar-row>
+      <span style="font-size:10px;color:white;">Immobilier De Luxe</span>
+  
+      <span class="example-spacer"></span>
+      
+     
+    </mat-toolbar-row>
+  </mat-toolbar>

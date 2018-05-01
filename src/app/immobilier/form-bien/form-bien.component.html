@@ -1,0 +1,70 @@
+ <div class="container"  style=" opacity:0.5" >
+  <br><br>
+<mat-accordion>
+  
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                      (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+    <i> Immobiler De Luxe</i>
+      </mat-panel-title>
+      <mat-panel-description>
+        Recherche bien {{panelOpenState ? '' : ''}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+
+    <div class="example-container"> 
+      <form #form="ngForm">
+        <input id="prix"type="number" matInput placeholder="Prix" name="prix_loc" value="Bien.prix_loc" (keyup)="search(form.value.prix_loc,'Bien')" ngModel>
+        <mat-form-field>
+          <mat-select placeholder="Typebien" name="typebien"(change)="search(form.value.typebien,'TypeBien')" ngModel>
+         <mat-option *ngFor="let TypeBien of typebien" [value]="TypeBien.id" >
+        {{TypeBien.libelletype}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>   
+        
+        
+        <mat-form-field>
+          <mat-select placeholder="Localite" name="localite" (change)="search(form.value.localite,'Localite')" ngModel>
+            <mat-option *ngFor="let Localite of loca" [value]="Localite.id">
+              {{Localite.libelleloca}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-button type="submit">Rechercher!</button>
+      </form>
+    </div>
+  </mat-expansion-panel>
+</mat-accordion>
+</div> 
+
+
+<!-- <input type="text" #box
+          (keyup.enter)="addHero(box.value); box.value=''"
+          placeholder="hero name">
+  <input id="can-fly" type="checkbox" [(ngModel)]="canFly"> can fly
+</p>
+<p>
+  <input id="mutate" type="checkbox" [(ngModel)]="mutate">Mutate array
+  <button (click)="reset()">Reset</button>
+</p>
+
+<h4>Heroes who fly (piped)</h4>
+<div id="flyers">
+  <div *ngFor="let hero of (heroes | flyingHeroes)">
+    {{hero.name}}
+  </div>
+</div>
+
+<h4>All Heroes (no pipe)</h4>
+<div id="all">
+  <div *ngFor="let hero of heroes">
+    {{hero.name}}
+  </div>
+</div> -->
+
+
+
+

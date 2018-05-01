@@ -1,0 +1,63 @@
+<div class="container"><mat-toolbar style="background-color:rgb(32, 32, 32);color:white;">
+  <mat-toolbar-row>
+    <span>Immobilier De Luxe</span>
+
+    <span class="example-spacer"></span>
+    
+    <button routerLink = "/re-cmp" mat-button class="btn btn-primary">Catalogue</button>
+    <!-- <button mat-button >Services</button> -->
+    <a type="button"routerLink = "/reservation-cmp" class="btn btn-primary">services</a>
+    <button mat-button class="btn btn-primary">Contact</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!-- <div class="container"> -->
+  <h3 style="color:ligthgrey;margin-left: 200px;">Validation  reservation</h3>
+<div class="row">
+      <div class="col-lg-6">
+      <div class="col s12 m6">
+        <div class="card ">
+          <div class="card-content ">
+            <span class="card-title">Information du bien</span>
+            <p><b>Nom du bien:</b>{{ OneR.bien.nombien}}</p>
+            <p><b>Type du bien:</b>{{ OneR.bien.typebien.libelletype}}</p>
+            <p><b>Localté:</b>{{ OneR.bien.localite.libelleloca}}</p>
+            <p><b>Prix de location:</b>{{ OneR.bien.prix_loc}}</p>
+          </div>     
+        </div>
+      </div>
+    </div>
+      <div class="col-lg-6">
+        <div class="col s12 m6">
+          <div class="card ">
+            <div class="card-content ">
+              <span class="card-title">Information du client</span>
+              <p><b>Nom du client:</b>{{ OneR.client.nomclient}}</p>
+              <p><b>Adresse du client:</b>{{ OneR.client.adresseclient}}</p>
+              <p><b>Email:</b>{{ OneR.client.emailclient}}</p>
+              <p><b>Téléphone:</b>{{ OneR.client.telclient}}</p>
+            </div>        
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <img mat-card-image src="data:image/jpg;base64,{{OneR.bien.images[0].image}}" width="200px" alt="Photo of a Shiba Inu">
+        </div>
+      </div>
+      <a routerLink="/save-cmp/{{OneR.id}}" class="btn btn-primary">Valider</a>
+
+</div>
+
+
+      <!-- <div class="row">
+        <div class="col-lg-12">
+                 </div>
+      </div> -->
+<mat-toolbar style="background-color:rgb(32, 32, 32)">
+  <mat-toolbar-row>
+    <span style="font-size:10px;color:white;">Immobilier De Luxe</span>
+
+    <span class="example-spacer"></span>      
+  </mat-toolbar-row>
+</mat-toolbar>
+</div>

@@ -1,0 +1,59 @@
+
+ <div class="container">
+ <div class="row" style="margin-top:50px;"> 
+    <div class="col-lg-12" >
+         <p>Les parties soussignées</p>
+         <p> 1.La société Immobilier De Luxe ayant son siége social à Amétié 3 </p>
+         <p>représenté par Mr Diafar Gueye</p>
+         <p>Ci-aprés désigné l'agent;</p>
+         <p>et</p>
+         <p>2. Madame/Monsieur {{OneR.client.nomclient}} demeurant à
+             {{OneR.client.adresseclient}}
+         </p>
+         <p>Ci-aprés désigné(e) le/la locataire;</p>
+         <p>ont conclu le présent <b>CONTRAT DE LOCATION A DURÉE D'UN ANS RENOUVELABLE</b></p>
+     </div>
+</div>
+             <div class="row">
+                 <div class="col-lg-12">  
+                       <p><b><u>Préambule</u></b></p>
+                       <p> {{OneR.bien.typebien.libelletype}}</p>
+                       <p>avec {{OneR.bien.description}}</p>
+                       <p>qui se trouve à {{OneR.bien.localite.libelleloca}} 
+                           lui a été louée au prix de {{ OneR.bien.prix_loc}} Fcfa
+                       </p>
+                   </div>
+             </div>
+         
+            <div class="row">
+                <div class="col_lg-12">
+                    <form method="post"(ngSubmit)="send(contratForm.value)" #contratForm="ngForm">
+                        <ul>
+                           <li style="list-style:none">
+                               <b>Caution:</b><input name="caution"type="number"value="{{OneR.bien.prix_loc}}" ngModel>
+                           </li>
+                           <li  style="list-style:none"> 
+                               <b> Mensualité:</b><input name="mensualite"type="number"value="{{OneR.bien.prix_loc}}"ngModel>
+                           </li>
+                            <li  style="list-style:none">
+                             <b>Total:</b><input name="total"value="{{OneR.bien.prix_loc *2}}"ngModel>
+                           </li>
+                           <li  style="list-style:none">
+                             <b></b><input name="idbien" type="hidden"value="{{OneR.bien.id}}" ngModel>
+                           </li>
+                         </ul>
+                                <!-- <strong>
+                                  <input type="checkbox" name="duree" value=""> contrat d'une durée d'un an renouvelable"</input>
+                                </strong><br> -->
+
+                         <!-- <input type="radio" name="nancy"value="" id="acc">Accepter</input>
+                         <input type="radio" name="nancy" value="" id="ref">Refuser</input> -->
+                         <input class="btn btn-info"  type="submit" name="enregistrer" value="Enregistrer" id="enregistre"  >
+                          <!-- <a href="{{path('pdf', {'id':reservation.id})}}" class="btn btn-info" >EN Pdf</a> -->
+
+                    </form>
+                </div>
+           </div>
+
+
+</div>

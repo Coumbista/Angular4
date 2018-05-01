@@ -1,0 +1,65 @@
+
+          <div class="row " style="width: 500px;">
+    <form class="col s12 " method="post" (ngSubmit)="send(bienForm.value)"  #bienForm="ngForm">
+     
+      <div class="row">
+        <div class="input-field col s6">
+          
+          <input placeholder="NIN" id="first_name" type="text"name="numeropiece" required class="validate" ngModel>
+          <label for="first_name">NIN</label>
+          <span class="helper-text" data-error="wrong" data-success="success">NIN obligatoire</span>
+
+        </div>
+        <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+          <input id="last_name" type="text" class="validate" name="nomclient"required ngModel>
+          <label for="last_name">Nom_Complet</label>
+          <span class="helper-text" data-error="wrong" data-success="success">nom obligatoire</span>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+            <i class="material-icons prefix">phone</i>
+          <input  value="" id="disabled"name="telclient" type="number"required class="validate" ngModel>
+          <label for="disabled">Telephone</label>
+          <span class="helper-text" data-error="wrong" data-success="success">téléphone obligatoire</span>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="text" class="validate"  required name="adresseclient" ngModel>
+          <label for="password">Adresse</label>
+          <span class="helper-text" data-error="wrong" data-success="success">password obligatoire</span>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+            <i class="material-icons prefix">email</i>
+          <input id="email" type="email" name="emailclient" required class="validate" ngModel>
+          <label for="email">Email</label>
+          <span class="helper-text" data-error="wrong" data-success="success">Email obligatoire</span>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+            <i class="material-icons prefix">lock_open</i>
+          <input id="email" type="password" name="password" required class="validate" ngModel>
+          <label for="email">Password</label>
+        </div>
+      </div>  
+      <div class="input-field col s12"> 
+         
+      <input  class="btn waves-effect waves-light" type="submit" name="submit"  value="submit" > 
+      
+      <i class="material-icons prefix">send</i>
+    </div> 
+    </form>
+  </div>
+  
+
+        
+

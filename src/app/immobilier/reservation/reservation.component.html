@@ -1,0 +1,33 @@
+<app-header></app-header><br><br><br>
+  <div class="container formres">
+      <div class="row">
+      <div class="col s6 cat" >
+       <mat-card class="example-card" >
+            <img class="image"  mat-card-image src="data:image/jpg;base64,{{OneBien.images[0].image}}">
+          <mat-card-content>
+              <mat-tab-group>
+           <mat-tab label="Détails du Bien">
+                Nom:{{OneBien.nombien}}  <br>  
+                Prix_Location:{{OneBien.prix_loc}}<br>
+                Description:{{OneBien.description}}
+              </mat-tab>
+              <mat-tab label="Images">
+                  <img class=""*ngFor="let image of OneBien.images"  src="data:image/jpg;base64,{{image.image}}"style="width:200px;">         
+              </mat-tab>
+        </mat-tab-group>
+        </mat-card-content>
+      </mat-card>
+   </div> 
+    <div class="col s6">
+        <mat-tab-group>
+             <mat-tab label="Inscription">
+                 <app-form-client ></app-form-client>
+            </mat-tab>
+                <mat-tab label="Connection">
+                    <app-form-connexion></app-form-connexion>
+               </mat-tab>
+        </mat-tab-group>
+    </div>
+    </div>
+</div>
+<app-footer></app-footer>
